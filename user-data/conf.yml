@@ -70,17 +70,17 @@ sections:
           url: "/notes.html"   # файл лежит в public/notes.html
           height: 320
           refreshInterval: 0
- - name: Заметки (статические)
-   icon: fas fa-sticky-note
-   displayData:
-     cols: 1
-   widgets:
-     - type: iframe
-       title: Статические заметки
-       options:
-         url: "/notes-static.html"   # файл лежит в public/
+  - name: Заметки (статические)
+    icon: fas fa-sticky-note
+    displayData:
+      cols: 1
+    widgets:
+      - type: iframe
+        title: Статические заметки
+        options:
+          url: "/notes-static.html"   # файл лежит в public/
          height: 320
-         refreshInterval: 0
+          refreshInterval: 0
 
       - type: text
         title: Рабочие шпаргалки
