@@ -70,6 +70,33 @@ sections:
           url: "/notes.html"   # файл лежит в public/notes.html
           height: 320
           refreshInterval: 0
+  - name: Заметки (статические)
+    icon: fas fa-sticky-note
+    displayData:
+      cols: 1
+    widgets:
+      - type: text
+        title: Личные заметки
+        content: |
+          • Список покупок:
+            - Молоко
+            - Хлеб
+            - Фрукты
+          • Напоминание: позвонить в банк
+          • Ссылка: https://calendar.google.com
+
+      - type: text
+        title: Рабочие шпаргалки
+        content: |
+          Команды:
+          - systemctl status zabbix-server
+          - journalctl -u graylog -f
+          - ssh user@server
+
+          Чек-лист:
+          - [ ] Обновить дашборд
+          - [ ] Проверить бэкапы Proxmox
+          - [ ] Разослать отчёт
 
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
