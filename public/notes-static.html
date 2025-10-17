@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заметки (статические)</title>
+  <style>
+    :root{ --bg:#1e1e1e; --panel:#202020; --text:#e5e5e5; --muted:#bdbdbd; --accent:#009FE3; --radius:12px; --pad:14px; --font:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);}
+    .card{background:var(--panel);margin:0;padding:var(--pad);border-radius:var(--radius);border:1px solid #2a2a2a}
+    h3{margin:0 0 10px 0;font-weight:600}
+    ul{margin:6px 0 0 18px}
+    li{margin:4px 0}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .muted{color:var(--muted);font-size:12px;margin-top:10px}
+    .checklist li{list-style: "☐ "; padding-left: 2px}
+    .checklist li.done{list-style: "☑ "; color:#9bd59b}
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h3>Статические заметки</h3>
+
+    <p><strong>Список покупок</strong></p>
+    <ul>
+      <li>Молоко</li>
+      <li>Хлеб</li>
+      <li>Фрукты</li>
+    </ul>
+
+    <p><strong>Напоминания</strong></p>
+    <ul class="checklist">
+      <li>Позвонить в банк</li>
+      <li class="done">Проверить счета</li>
+    </ul>
+
+    <p><strong>Ссылки</strong></p>
+    <ul>
+      <li><a href="https://calendar.google.com" target="_blank" rel="noopener">Календарь</a></li>
+      <li><a href="https://keep.google.com" target="_blank" rel="noopener">Google Keep</a></li>
+    </ul>
+
+    <div class="muted">Редактируй этот файл, чтобы обновлять текст. Хранится как статика, без localStorage.</div>
+  </div>
+</body>
+</html>
