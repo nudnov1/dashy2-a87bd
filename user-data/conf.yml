@@ -46,7 +46,7 @@ quicklaunch:
 
 sections:
   # ── Виджеты (личные) ──────────────────────
-  - name: Информация
+  - name: i
     icon: fas fa-info-circle
     displayData:
       cols: 3
