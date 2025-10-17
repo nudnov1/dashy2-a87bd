@@ -25,7 +25,7 @@ appConfig:
         name: Aleksei
         type: admin
         # пароль: LVpass25
-        hash: "$2b$10$HZnffq8mQZEvMbJh4oc.6.DkqY4EtrhIC4s2apx3c3qSRR.qmMgXa"
+        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE
       - user: rouser
         name: ReadOnly
         type: read-only
