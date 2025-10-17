@@ -56,7 +56,10 @@ sections:
       - type: public-ip
         options:
         provider: ipgeolocation
-        apiKey: 07a01148c98746cfa34f5bf28d433910
+        apiKey: 07a01148c98746cfa34f5bf28d43391
+    widgets:
+      - type: clock
+
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
     icon: fas fa-piggy-bank
