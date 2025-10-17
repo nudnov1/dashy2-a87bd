@@ -1,6 +1,6 @@
 appConfig:
   title: My Home Dashboard
-  description: Личный дашборд: банки/финансы, отпуск, ссылки и инструменты
+  description: "Личный дашборд: банки/финансы, отпуск, ссылки и инструменты"
   theme: one-dark
   language: ru
   iconSize: medium
@@ -14,6 +14,8 @@ appConfig:
     background-darker: "#181818"
     text: "#e5e5e5"
     text-darker: "#c9c9c9"
+  hideComponents:
+    - footer
 
   # 🔐 Авторизация (SHA-256)
   auth:
@@ -21,13 +23,12 @@ appConfig:
     users:
       - user: admin
         type: admin
-        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE  # пароль 
+        # Пароль: LVpass25 (замени хэш при желании)
+        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE
       - user: rouser
         type: read-only
-        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719  # пароль 
-
-  hideComponents:
-    - footer
+        # Пароль: rouserdashy
+        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719
 
 # 🔍 Быстрый поиск
 quicklaunch:
@@ -44,6 +45,30 @@ quicklaunch:
       url: https://www.google.com/search?q=site%3Adocs.google.com+
 
 sections:
+  # ── Виджеты ───────────────────────────────
+  - name: Информация
+    icon: fas fa-info-circle
+    displayData:
+      cols: 3
+    widgets:
+      - type: clock
+        title: Текущее время
+        options:
+          format: "HH:mm:ss"
+          timezone: "Asia/Jerusalem"
+      - type: iframe
+        title: Мой IP
+        options:
+          url: "https://api.ipify.org?format=txt"
+          height: 80
+          refreshInterval: 600
+      - type: date
+        title: Сегодня
+        options:
+          format: "dddd, DD MMMM YYYY"
+          locale: "ru"
+
+  # ── Банки и финансы ───────────────────────
   - name: Банки и финансы
     icon: fas fa-piggy-bank
     items:
@@ -73,6 +98,7 @@ sections:
         icon: fas fa-dollar-sign
         url: https://www.google.com/search?q=ILS+converter
 
+  # ── Полезные ссылки ───────────────────────
   - name: Полезные ссылки
     icon: fas fa-star
     items:
@@ -98,6 +124,7 @@ sections:
         icon: fas fa-key
         url: https://vault.example.com
 
+  # ── Отпуск и путешествия ──────────────────
   - name: Отпуск и путешествия
     icon: fas fa-umbrella-beach
     items:
@@ -126,6 +153,7 @@ sections:
         icon: fas fa-clipboard-check
         url: https://keep.google.com
 
+  # ── Дом и семья ───────────────────────────
   - name: Дом и семья
     icon: fas fa-home
     items:
@@ -148,6 +176,7 @@ sections:
         icon: fas fa-lightbulb
         url: https://smarthome.example.com
 
+  # ── Работа и документы ────────────────────
   - name: Работа и документы
     icon: fas fa-briefcase
     items:
@@ -170,6 +199,7 @@ sections:
         icon: fas fa-receipt
         url: https://subscriptions.example.com
 
+  # ── Инструменты ───────────────────────────
   - name: Инструменты
     icon: fas fa-tools
     items:
