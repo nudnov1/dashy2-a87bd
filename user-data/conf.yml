@@ -58,12 +58,6 @@ sections:
           url: "https://api.ipify.org?format=txt"
           height: 80
           refreshInterval: 600
-       - type: iframe
-        title: Мой IP
-        options:
-          url: "https://demo12.nudnov.net/"
-          height: 80
-          refreshInterval: 600
 # ── Заметки ───────────────────────────────
   - name: Заметки
     icon: fas fa-sticky-note
