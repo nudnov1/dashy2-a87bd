@@ -59,7 +59,7 @@ sections:
       - type: iframe
         title: Мой IP
         options:
-          url: "https://api.ipify.org?format=txt"
+          url: "https://noc.co.il"
           height: 80
           refreshInterval: 600
       - type: date
