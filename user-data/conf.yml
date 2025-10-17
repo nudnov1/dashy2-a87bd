@@ -53,10 +53,6 @@ sections:
     widgets:
       - type: clock
       - type: public-ip
-      
-      - type: date
-
-
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
     icon: fas fa-piggy-bank
