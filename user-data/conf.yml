@@ -1,47 +1,171 @@
----
-# Page meta info, like heading, footer text and nav links
-pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
-  navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
 appConfig:
-  theme: colorful
+  title: LiveDNS Dashboard
+  description: Централизованный дашборд для инфраструктуры LiveDNS
+  theme: one-dark
+  language: ru
+  iconSize: medium
+  layout: auto
+  hideComponents:
+    - footer
+  appTitle:
+    icon: fas fa-th-large
+    text: LiveDNS
+  customColors:
+    primary: "#009FE3"
+    background: "#1e1e1e"
+    background-darker: "#181818"
+    text: "#e5e5e5"
+    text-darker: "#c9c9c9"
 
-# Main content - An array of sections, each containing an array of items
+  # ✅ Авторизация
+  auth:
+    enableLogin: true
+    users:
+      - user: admin
+        name: Aleksei
+        type: admin
+        # пароль: LVpass25
+        hash: "$2b$10$HZnffq8mQZEvMbJh4oc.6.DkqY4EtrhIC4s2apx3c3qSRR.qmMgXa"
+      - user: rouser
+        name: ReadOnly
+        type: read-only
+        # пароль: rouserdashy
+        hash: "$2b$10$U7nXdcWBejDqwb7bqgF0UuKbgpx/azBLZHeLXvFPu6pDP9gQO0twO"
+
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
+  - name: Monitoring
+    icon: fas fa-chart-line
+    items:
+      - title: Zabbix
+        icon: fas fa-chart-area
+        url: https://zabbix.example.com
+      - title: Graylog
+        icon: fas fa-terminal
+        url: https://graylog.example.com
+      - title: LibreNMS
+        icon: fas fa-network-wired
+        url: https://librenms.example.com
+      - title: Uptime Kuma
+        icon: fas fa-heartbeat
+        url: https://uptime.example.com
+
+  - name: Virtualization
+    icon: fas fa-server
+    items:
+      - title: VMware vCenter
+        icon: fas fa-project-diagram
+        url: https://vcenter.example.com
+      - title: Proxmox VE
+        icon: fas fa-layer-group
+        url: https://proxmox.example.com
+      - title: Hyper-V Cluster
+        icon: fas fa-server
+        url: https://hyperv.example.com
+
+  - name: Network
+    icon: fas fa-network-wired
+    items:
+      - title: FortiGate
+        icon: fas fa-shield-alt
+        url: https://fw.example.com
+      - title: FortiAnalyzer
+        icon: fas fa-search
+        url: https://faz.example.com
+      - title: FortiDDOS
+        icon: fas fa-bolt
+        url: https://ddos.example.com
+      - title: Cisco Nexus
+        icon: fas fa-exchange-alt
+        url: https://nexus.example.com
+      - title: HPE/Aruba Switch Stack
+        icon: fas fa-ethernet
+        url: https://aruba.example.com
+
+  - name: Security
+    icon: fas fa-lock
+    items:
+      - title: Wazuh
+        icon: fas fa-user-shield
+        url: https://wazuh.example.com
+      - title: PMG Mail Gateway
+        icon: fas fa-envelope-open-text
+        url: https://pmg.example.com
+      - title: Vaultwarden
+        icon: fas fa-key
+        url: https://vault.example.com
+
+  - name: Storage
+    icon: fas fa-database
+    items:
+      - title: IBM FlashSystem
+        icon: fas fa-hdd
+        url: https://flashsystem.example.com
+      - title: HPE 3PAR / Primera
+        icon: fas fa-server
+        url: https://3par.example.com
+      - title: Veeam Backup
+        icon: fas fa-cloud-download-alt
+        url: https://veeam.example.com
+      - title: TrueNAS
+        icon: fas fa-database
+        url: https://truenas.example.com
+
+  - name: DNS Services
+    icon: fas fa-globe
+    items:
+      - title: PowerDNS Admin
+        icon: fas fa-dns
+        url: https://pdns.example.com
+      - title: LiveDNS Panel
+        icon: fas fa-globe-europe
+        url: https://livedns.example.com
+      - title: DNS Analytics
+        icon: fas fa-chart-bar
+        url: https://dns-analytics.example.com
+
+  - name: Management
+    icon: fas fa-tools
+    items:
+      - title: Cisco Intersight
+        icon: fas fa-microchip
+        url: https://intersight.example.com
+      - title: FortiManager
+        icon: fas fa-sliders-h
+        url: https://fmg.example.com
+      - title: Cloudflare
+        icon: fas fa-cloud
+        url: https://dash.cloudflare.com
+      - title: Zammad Helpdesk
+        icon: fas fa-headset
+        url: https://helpdesk.example.com
+
+  - name: Tools
+    icon: fas fa-code
+    items:
+      - title: Portainer
+        icon: fab fa-docker
+        url: https://portainer.example.com
+      - title: GitLab / Gitea
+        icon: fab fa-git-alt
+        url: https://git.example.com
+      - title: Ansible AWX
+        icon: fas fa-robot
+        url: https://awx.example.com
+      - title: Speedtest
+        icon: fas fa-tachometer-alt
+        url: https://speed.example.com
+
+  - name: External Links
+    icon: fas fa-external-link-alt
+    items:
+      - title: NOC
+        icon: fas fa-satellite-dish
+        url: https://noc.example.com
+      - title: Public Status
+        icon: fas fa-traffic-light
+        url: https://status.example.com
+      - title: Company Website
+        icon: fas fa-home
+        url: https://www.example.com
+
   
