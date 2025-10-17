@@ -21,10 +21,10 @@ appConfig:
     users:
       - user: admin
         type: admin
-        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE  # пароль LVpass25 — замени при желании
+        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE  # пароль 
       - user: rouser
         type: read-only
-        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719  # пароль rouserdashy
+        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719  # пароль 
 
   hideComponents:
     - footer
