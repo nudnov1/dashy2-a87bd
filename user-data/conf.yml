@@ -1,5 +1,5 @@
 appConfig:
-  title: LiveDNS Dashboard
+  title: LDNS Dashboard
   description: Централизованный дашборд для инфраструктуры LiveDNS
   theme: one-dark
   language: ru
