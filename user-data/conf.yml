@@ -52,13 +52,6 @@ sections:
       cols: 3
     widgets:
       - type: clock
-
-  - name: i2
-    icon: fas fa-info-circle
-    displayData:
-      cols: 3
-    widgets:
-      - type: clock
   - name: Заметки
     icon: fas fa-sticky-note
     displayData:
