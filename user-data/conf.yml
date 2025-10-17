@@ -30,7 +30,7 @@ appConfig:
         name: ReadOnly
         type: read-only
         # пароль: rouserdashy
-        hash: "$2b$10$U7nXdcWBejDqwb7bqgF0UuKbgpx/azBLZHeLXvFPu6pDP9gQO0twO"
+        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719
 
 sections:
   - name: Monitoring
