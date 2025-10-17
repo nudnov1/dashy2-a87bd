@@ -52,16 +52,16 @@ sections:
       cols: 3
     widgets:
       - type: clock
-  - name: Заметки
-    icon: fas fa-sticky-note
-    displayData:
-      cols: 1
-    widgets:
-      - type: notes
-        title: Личные заметки
-        options:
-          placeholder: "Напиши здесь задачу, идею или напоминание..."
-          maxLength: 2000
+- name: Заметки
+  icon: fas fa-sticky-note
+  displayData:
+    cols: 1
+  widgets:
+    - type: iframe
+      title: Личные заметки
+      options:
+        url: "/notes.html"   # локальный файл из public/
+        height: 320
 
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
