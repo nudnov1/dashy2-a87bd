@@ -79,7 +79,7 @@ sections:
         title: Статические заметки
         options:
           url: "/notes-static.html"   # файл лежит в public/
-         height: 320
+          height: 320
           refreshInterval: 0
 
       - type: text
