@@ -79,21 +79,8 @@ sections:
         title: Статические заметки
         options:
           url: "/notes-static.html"   # файл лежит в public/
-          height: 320
+          height: 520
           refreshInterval: 0
-
-      - type: text
-        title: Рабочие шпаргалки
-        content: |
-          Команды:
-          - systemctl status zabbix-server
-          - journalctl -u graylog -f
-          - ssh user@server
-
-          Чек-лист:
-          - [ ] Обновить дашборд
-          - [ ] Проверить бэкапы Proxmox
-          - [ ] Разослать отчёт
 
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
