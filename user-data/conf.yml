@@ -53,18 +53,9 @@ sections:
     widgets:
       - type: clock
       - type: public-ip
-      - type: iframe
-        title: Мой IP
-        options:
-          url: "https://noc.co.il"
-          height: 80
-          refreshInterval: 600
       
       - type: date
-        title: Сегодня
-        options:
-          format: "dddd, DD MMMM YYYY"
-          locale: "ru"
+
 
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
