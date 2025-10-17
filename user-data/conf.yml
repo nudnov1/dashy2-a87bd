@@ -1,15 +1,13 @@
 appConfig:
-  title: LDNS Dashboard
-  description: Централизованный дашборд для инфраструктуры LiveDNS
+  title: My Home Dashboard
+  description: Личный дашборд: банки/финансы, отпуск, ссылки и инструменты
   theme: one-dark
   language: ru
   iconSize: medium
   layout: auto
-  hideComponents:
-    - footer
   appTitle:
-    icon: fas fa-th-large
-    text: LiveDNS
+    icon: fas fa-user-circle
+    text: Home
   customColors:
     primary: "#009FE3"
     background: "#1e1e1e"
@@ -17,155 +15,179 @@ appConfig:
     text: "#e5e5e5"
     text-darker: "#c9c9c9"
 
-  # ✅ Авторизация
+  # 🔐 Авторизация (SHA-256)
   auth:
     enableLogin: true
     users:
       - user: admin
-        name: Aleksei
         type: admin
-        # пароль: LVpass25
-        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE
+        hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE  # пароль LVpass25 — замени при желании
       - user: rouser
-        name: ReadOnly
         type: read-only
-        # пароль: rouserdashy
-        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719
+        hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719  # пароль rouserdashy
+
+  hideComponents:
+    - footer
+
+# 🔍 Быстрый поиск
+quicklaunch:
+  searchDescriptions: true
+  hideInternetSearch: false
+  searchEngines:
+    - name: Google
+      url: https://www.google.com/search?q=
+    - name: YouTube
+      url: https://www.youtube.com/results?search_query=
+    - name: Maps
+      url: https://www.google.com/maps/search/
+    - name: Docs
+      url: https://www.google.com/search?q=site%3Adocs.google.com+
 
 sections:
-  - name: Monitoring
-    icon: fas fa-chart-line
+  - name: Банки и финансы
+    icon: fas fa-piggy-bank
     items:
-      - title: Zabbix
-        icon: fas fa-chart-area
-        url: https://zabbix.example.com
-      - title: Graylog
-        icon: fas fa-terminal
-        url: https://graylog.example.com
-      - title: LibreNMS
-        icon: fas fa-network-wired
-        url: https://librenms.example.com
-      - title: Uptime Kuma
-        icon: fas fa-heartbeat
-        url: https://uptime.example.com
+      - title: Банк №1 (личный)
+        icon: fas fa-university
+        url: https://bank1.example.com
+        description: Интернет-банк, карты, переводы
+      - title: Банк №2 (совместный счёт)
+        icon: fas fa-university
+        url: https://bank2.example.com
+      - title: Кредитные карты
+        icon: fas fa-credit-card
+        url: https://cards.example.com
+      - title: Инвестиции / Брокер
+        icon: fas fa-chart-line
+        url: https://broker.example.com
+      - title: Пенсия / Копилки
+        icon: fas fa-wallet
+        url: https://pension.example.com
+      - title: Налоги (личный кабинет)
+        icon: fas fa-file-invoice-dollar
+        url: https://tax.example.com
+      - title: Семейный бюджет (Google Sheet)
+        icon: fas fa-table
+        url: https://docs.google.com/spreadsheets/d/your-budget
+      - title: Конвертер валют (ILS)
+        icon: fas fa-dollar-sign
+        url: https://www.google.com/search?q=ILS+converter
 
-  - name: Virtualization
-    icon: fas fa-server
+  - name: Полезные ссылки
+    icon: fas fa-star
     items:
-      - title: VMware vCenter
-        icon: fas fa-project-diagram
-        url: https://vcenter.example.com
-      - title: Proxmox VE
-        icon: fas fa-layer-group
-        url: https://proxmox.example.com
-      - title: Hyper-V Cluster
-        icon: fas fa-server
-        url: https://hyperv.example.com
-
-  - name: Network
-    icon: fas fa-network-wired
-    items:
-      - title: FortiGate
-        icon: fas fa-shield-alt
-        url: https://fw.example.com
-      - title: FortiAnalyzer
-        icon: fas fa-search
-        url: https://faz.example.com
-      - title: FortiDDOS
+      - title: Почта (личная)
+        icon: fas fa-envelope
+        url: https://mail.example.com
+      - title: Облако / Фотоархив
+        icon: fas fa-cloud
+        url: https://cloud.example.com
+      - title: Государственные услуги
+        icon: fas fa-landmark
+        url: https://gov.example.com
+      - title: Доставка / Почта
+        icon: fas fa-shipping-fast
+        url: https://post.example.com
+      - title: Электросчётчик / Коммуналка
         icon: fas fa-bolt
-        url: https://ddos.example.com
-      - title: Cisco Nexus
-        icon: fas fa-exchange-alt
-        url: https://nexus.example.com
-      - title: HPE/Aruba Switch Stack
-        icon: fas fa-ethernet
-        url: https://aruba.example.com
-
-  - name: Security
-    icon: fas fa-lock
-    items:
-      - title: Wazuh
-        icon: fas fa-user-shield
-        url: https://wazuh.example.com
-      - title: PMG Mail Gateway
-        icon: fas fa-envelope-open-text
-        url: https://pmg.example.com
-      - title: Vaultwarden
+        url: https://utilities.example.com
+      - title: Speedtest
+        icon: fas fa-tachometer-alt
+        url: https://www.speedtest.net
+      - title: Пароли (личный менеджер)
         icon: fas fa-key
         url: https://vault.example.com
 
-  - name: Storage
-    icon: fas fa-database
+  - name: Отпуск и путешествия
+    icon: fas fa-umbrella-beach
     items:
-      - title: IBM FlashSystem
-        icon: fas fa-hdd
-        url: https://flashsystem.example.com
-      - title: HPE 3PAR / Primera
-        icon: fas fa-server
-        url: https://3par.example.com
-      - title: Veeam Backup
-        icon: fas fa-cloud-download-alt
-        url: https://veeam.example.com
-      - title: TrueNAS
-        icon: fas fa-database
-        url: https://truenas.example.com
+      - title: Авиабилеты (агрегатор)
+        icon: fas fa-plane-departure
+        url: https://flights.example.com
+      - title: EL AL (аккаунт/билеты)
+        icon: fas fa-plane
+        url: https://elal.example.com
+      - title: Отели / Квартиры
+        icon: fas fa-hotel
+        url: https://hotels.example.com
+      - title: Аренда авто
+        icon: fas fa-car
+        url: https://car-rental.example.com
+      - title: Маршруты / Транспорт
+        icon: fas fa-route
+        url: https://routes.example.com
+      - title: Погода в поездке
+        icon: fas fa-cloud-sun
+        url: https://www.google.com/search?q=weather
+      - title: Страховка путешествий
+        icon: fas fa-shield-alt
+        url: https://insurance.example.com
+      - title: Список вещей (Google Keep)
+        icon: fas fa-clipboard-check
+        url: https://keep.google.com
 
-  - name: DNS Services
-    icon: fas fa-globe
+  - name: Дом и семья
+    icon: fas fa-home
     items:
-      - title: PowerDNS Admin
-        icon: fas fa-dns
-        url: https://pdns.example.com
-      - title: LiveDNS Panel
-        icon: fas fa-globe-europe
-        url: https://livedns.example.com
-      - title: DNS Analytics
-        icon: fas fa-chart-bar
-        url: https://dns-analytics.example.com
+      - title: Календарь семьи
+        icon: fas fa-calendar-alt
+        url: https://calendar.google.com
+      - title: Список покупок
+        icon: fas fa-shopping-basket
+        url: https://shopping-list.example.com
+      - title: Школа/сад — портал
+        icon: fas fa-school
+        url: https://school.example.com
+      - title: Медкарта / Запись к врачу
+        icon: fas fa-notes-medical
+        url: https://health.example.com
+      - title: Фото и видео (семейный)
+        icon: fas fa-images
+        url: https://photos.example.com
+      - title: Smart-Home
+        icon: fas fa-lightbulb
+        url: https://smarthome.example.com
 
-  - name: Management
+  - name: Работа и документы
+    icon: fas fa-briefcase
+    items:
+      - title: Личные документы (диск)
+        icon: fas fa-folder
+        url: https://drive.example.com
+      - title: Резюме / CV
+        icon: fas fa-id-badge
+        url: https://docs.google.com/document/d/your-cv
+      - title: Фин. отчёты (личные)
+        icon: fas fa-file-invoice
+        url: https://docs.google.com/spreadsheets/d/finance-reports
+      - title: Личный таск-менеджер
+        icon: fas fa-check-square
+        url: https://todo.example.com
+      - title: Личные заметки / Wiki
+        icon: fas fa-sticky-note
+        url: https://notes.example.com
+      - title: Подписки / платежи
+        icon: fas fa-receipt
+        url: https://subscriptions.example.com
+
+  - name: Инструменты
     icon: fas fa-tools
     items:
-      - title: Cisco Intersight
-        icon: fas fa-microchip
-        url: https://intersight.example.com
-      - title: FortiManager
-        icon: fas fa-sliders-h
-        url: https://fmg.example.com
-      - title: Cloudflare
-        icon: fas fa-cloud
-        url: https://dash.cloudflare.com
-      - title: Zammad Helpdesk
-        icon: fas fa-headset
-        url: https://helpdesk.example.com
-
-  - name: Tools
-    icon: fas fa-code
-    items:
-      - title: Portainer
-        icon: fab fa-docker
-        url: https://portainer.example.com
-      - title: GitLab / Gitea
-        icon: fab fa-git-alt
-        url: https://git.example.com
-      - title: Ansible AWX
-        icon: fas fa-robot
-        url: https://awx.example.com
-      - title: Speedtest
-        icon: fas fa-tachometer-alt
-        url: https://speed.example.com
-
-  - name: External Links
-    icon: fas fa-external-link-alt
-    items:
-      - title: NOC
-        icon: fas fa-satellite-dish
-        url: https://noc.example.com
-      - title: Public Status
-        icon: fas fa-traffic-light
-        url: https://status.example.com
-      - title: Company Website
+      - title: Конвертеры (единицы/PDF/изображения)
+        icon: fas fa-exchange-alt
+        url: https://tools.example.com
+      - title: Генератор паролей
+        icon: fas fa-random
+        url: https://passwords.example.com
+      - title: Калькулятор ипотека
         icon: fas fa-home
-        url: https://www.example.com
-
-  
+        url: https://mortgage.example.com
+      - title: Калькулятор лизинга авто
+        icon: fas fa-car-side
+        url: https://leasing.example.com
+      - title: Курсы валют графики
+        icon: fas fa-chart-area
+        url: https://fx.example.com
+      - title: OCR / Сканы → PDF
+        icon: fas fa-file-pdf
+        url: https://ocr.example.com
