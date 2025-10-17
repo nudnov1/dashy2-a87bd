@@ -68,7 +68,7 @@ sections:
         title: Личные заметки
         options:
           url: "/notes.html"   # файл лежит в public/notes.html
-          height: 320
+          height: 520
           refreshInterval: 0
   - name: Заметки (статические)
     icon: fas fa-sticky-note
