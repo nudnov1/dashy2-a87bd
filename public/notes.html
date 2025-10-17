@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Заметки</title>
+  <style>
+    :root{
+      --bg:#1e1e1e; --bg2:#181818; --text:#e5e5e5; --muted:#c9c9c9; --accent:#009FE3;
+      --radius:12px; --pad:12px; --font:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial;
+    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font);}
+    .wrap{padding:var(--pad);}
+    h3{margin:0 0 8px 0;font-weight:600}
+    .bar{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+    .bar button{
+      border:1px solid #2a2a2a;background:#222;color:var(--text);
+      padding:6px 10px;border-radius:8px;cursor:pointer
+    }
+    .bar button:hover{border-color:var(--accent)}
+    textarea{
+      width:100%; height:220px; border:1px solid #2a2a2a; background:var(--bg2);
+      color:var(--text); border-radius:var(--radius); padding:10px; resize:vertical;
+      outline:none; box-sizing:border-box; font-family:inherit; font-size:14px; line-height:1.4;
+    }
+    .hint{color:var(--muted);font-size:12px;margin-top:6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="bar">
+      <h3 style="flex:1">Личные заметки</h3>
+      <button id="btn-save" title="Сохранить (Ctrl/Cmd+S)">Сохранить</button>
+      <button id="btn-clear" title="Очистить">Очистить</button>
+    </div>
+    <textarea id="notes" placeholder="Напиши здесь задачу, идею или напоминание..."></textarea>
+    <div class="hint">Сохраняется в этом браузере (localStorage). Горячая клавиша: Ctrl/Cmd+S.</div>
+  </div>
+
+  <script>
+    const KEY = 'dashy_notes_v1';
+    const ta = document.getElementById('notes');
+    const save = () => localStorage.setItem(KEY, ta.value);
+    const load = () => ta.value = localStorage.getItem(KEY) || '';
+    document.getElementById('btn-save').onclick = save;
+    document.getElementById('btn-clear').onclick = () => { ta.value=''; save(); };
+    document.addEventListener('keydown', e => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase()==='s'){ e.preventDefault(); save(); }
+    });
+    load();
+  </script>
+</body>
+</html>
