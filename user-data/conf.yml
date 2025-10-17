@@ -23,11 +23,11 @@ appConfig:
     users:
       - user: admin
         type: admin
-        # Пароль: LVpass25 (замени хэш при желании)
+        # Пароль: (замени хэш при желании)
         hash: C20BFAE021E753CD135F97494D3056C839AF6F5B03F339BFC5282AD7B7723BCE
       - user: rouser
         type: read-only
-        # Пароль: rouserdashy
+        # Пароль:
         hash: 7DF31996D0E1DD94FC0123913DF16D565E97BB1A51FA53F709A93966473AD719
 
 # 🔍 Быстрый поиск
@@ -53,6 +53,10 @@ sections:
     widgets:
       - type: clock
       - type: public-ip
+      - type: public-ip
+        options:
+        provider: ipgeolocation
+        apiKey: 07a01148c98746cfa34f5bf28d433910
   # ── Личные разделы ────────────────────────
   - name: Банки и финансы
     icon: fas fa-piggy-bank
